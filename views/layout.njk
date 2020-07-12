@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  
+    {% block head %}
+      <title>Fenix</title>
+    {% endblock %}
+
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <header>
+
+      <div class="content">
+        <nav>
+          <img src="/logo-header.png" alt="" width="200px">
+          <div class="separation"></div>
+          <div class="links">
+            <a href="/" class="">Teachers</a>
+           <a href="/portfolio" class="">Students</a>
+         </div>
+        </nav>
+
+        
+      </div>
+    </header>
+  
+
+    {% block content %}
+
+    {% endblock %}
+
+  </body>
+</html>
