@@ -1,7 +1,6 @@
 {
   "name": "backend-learning",
   "version": "1.0.0",
-  "description": "",
   "main": "server.js",
   "scripts": {
     "start": "npm-run-all -p nodemon browsersync",
@@ -16,5 +15,17 @@
     "browser-sync": "^2.26.7",
     "nodemon": "^2.0.4",
     "npm-run-all": "^4.1.5"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juliocesarfs/fenix.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/juliocesarfs/fenix/issues"
+  },
+  "homepage": "https://github.com/juliocesarfs/fenix#readme",
+  "description": ""
 }
