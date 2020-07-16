@@ -21,15 +21,13 @@ The Fênix project is a platform where its main objective is the connection betw
 
 A free platform, aiming at free knowledge and valuing teachers who want to make classes available to other students registered on the platform.
 
-Unlike other study platforms, we offer teachers, not courses.
-
-Where both (teacher and student) are totally free within the platform, our only goal is to connect them
+Where both (teacher and student) are totally free within the platform, our only goal is to connect them.
 
 ## :warning: WARNING
-The purpose of this project is for my personal study, unfortunately the Fênix is ​​not an application in the market
+The purpose of this project is for my personal study, unfortunately the Fênix is ​​not an application in the market.
 
 ## :love_letter: Motivation
-Our biggest motivation is in relation to Covid-19, with schools closed, teachers and students at home, the idea came up to create a completely online platform where teachers can exercise their occupation at home
+Our biggest motivation is in relation to Covid-19, with schools closed, teachers and students at home, the idea came up to create a completely online platform where teachers can exercise their occupation at home.
 
 
 ## :blue_book: LICENSE
