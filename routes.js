@@ -14,8 +14,14 @@ routes.get('/teachers/create', function(req, res) {
 })
 
 routes.post('/teachers', function(req, res) {
+  const keys = Object.keys(req.body);
 
-  return res.send(req.body.name);
+  for (key of keys) {
+    if (req.body[key] == '')
+      return res.send('Please fill all fields');
+  }
+
+  return res.send(keys);
 })
 
 routes.get('/students', function(req, res) {
