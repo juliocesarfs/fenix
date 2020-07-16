@@ -6,7 +6,8 @@ const routes = require('./routes');
 //criando um servidor (executa o express)
 const server = express();
 
-//configurando o estilo
+//middlewares
+server.use(express.urlencoded({ extended: true }));
 server.use(express.static('public'));
 server.use(routes);
 

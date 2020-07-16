@@ -14,7 +14,8 @@ routes.get('/teachers/create', function(req, res) {
 })
 
 routes.post('/teachers', function(req, res) {
-  return res.send('Okay');
+
+  return res.send(req.body.name);
 })
 
 routes.get('/students', function(req, res) {
