@@ -1,5 +1,6 @@
 const fs = require('fs');
 const data = require('./data.json');
+const { findTeacher } = require('./utils');
 
 exports.post = function(req, res) {
   const keys = Object.keys(req.body);
@@ -31,4 +32,12 @@ exports.post = function(req, res) {
 
     return res.redirect('teachers');
   })
+}
+
+exports.show = function(req, res) {
+  const foundTeacher = findTeacher(req.params);
+
+  if(!foundTeacher) return res.send('Teacher not found!');
+  
+  return res.render('teachers/show', { teacher: foundTeacher });
 }

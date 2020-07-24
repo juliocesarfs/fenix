@@ -16,11 +16,7 @@ routes.get('/teachers/create', function(req, res) {
 
 routes.post('/teachers', teachers.post);
 
-routes.get('/teachers/:id', function(req, res) {
-  const id = req.params.id;
-  
-  return res.send(id);
-})
+routes.get('/teachers/:id', teachers.show);
 
 routes.get('/students', function(req, res) {
   return res.send('students');
