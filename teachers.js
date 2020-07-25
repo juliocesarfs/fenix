@@ -1,6 +1,6 @@
 const fs = require('fs');
 const data = require('./data.json');
-const { age, findTeacher } = require('./utils');
+const { date, age, findTeacher } = require('./utils');
 
 exports.post = function(req, res) {
   const keys = Object.keys(req.body);
@@ -13,10 +13,10 @@ exports.post = function(req, res) {
   let { avatar_url, name, birth, education_level, class_type, expertises } = req.body;
 
   const created_at = Date.now();
-  const id = Number(data.instructors.length + 1);
+  const id = Number(data.teachers.length + 1);
   birth = Date.parse(birth);
 
-  data.instructors.push({
+  data.teachers.push({
     id,
     avatar_url,
     name,
@@ -52,5 +52,12 @@ exports.show = function(req, res) {
 exports.edit = function(req, res) {
   const foundTeacher = findTeacher(req.params);
 
-  return res.send(foundTeacher);
+  if(!foundTeacher) return res.send('Teacher not found!');
+
+  const teacher = {
+    ...foundTeacher,
+    birth: date(foundTeacher.birth)
+  }
+
+  return res.render('teachers/edit', { teacher });
 }
