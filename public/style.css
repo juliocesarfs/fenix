@@ -170,7 +170,7 @@ header nav .links a:hover::after {
 form input, select, option, button {
   color: black;
   background-color: var(--color-body);
-  border-radius: 10px;
+  border-radius: 3px;
   border: none;
 }
 form input {

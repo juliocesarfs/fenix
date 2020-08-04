@@ -49,11 +49,11 @@
   <div>Class type</div>
   <div>
     <span>
-      <input type="radio" name="class_type" value="presential" checked>
+      <input type="radio" name="class_type" value="Presential" {% if teacher.class_type == "Presential" %} checked {% endif %}>
       Presential
     </span>
     <span>
-      <input type="radio" name="class_type" value="distance">
+      <input type="radio" name="class_type" value="Distance" {% if teacher.class_type == "Distance" %} checked {% endif %}>
       Distance
     </span>
   </div>
@@ -66,6 +66,7 @@
       type="text" 
       name="expertises"
       placeholder="Separate each expertise area with a comma"
+      value="{{ teacher.expertises}}"
     >
   </div>
 </div>
