@@ -30,5 +30,13 @@ module.exports = {
     const day = `0${date.getUTCDate()}`.slice(-2)
 
     return `${year}-${month}-${day}`;
+  },
+  graduation: function(education_level) {
+    switch (education_level) {
+      case 'school': return 'High School';
+      case 'university': return 'University Education';
+      case 'master': return 'Master degree';
+      case 'doctorate': return 'Doctorate degree';
+    }
   }
 }

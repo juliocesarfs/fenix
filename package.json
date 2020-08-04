@@ -17,7 +17,9 @@
     "npm-run-all": "^4.1.5"
   },
   "nodemonConfig": {
-    "ignore": ["data.json"]
+    "ignore": [
+      "data.json"
+    ]
   },
   "repository": {
     "type": "git",
