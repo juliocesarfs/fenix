@@ -1,34 +1,4 @@
 {
   "teachers": [
-    {
-      "id": 1,
-      "avatar_url": "http://google.com",
-      "name": "Júlio",
-      "birth": 568762052400000,
-      "education_level": "university",
-      "class_type": "presential",
-      "expertises": "Programming, Mathematics, Crossfit",
-      "created_at": 1596563780924
-    },
-    {
-      "id": 2,
-      "avatar_url": "http://google.com",
-      "name": "Heloisa",
-      "birth": 610329600000,
-      "education_level": "master degree",
-      "class_type": "distance",
-      "expertises": "Programming, Mathematics, Crossfit",
-      "created_at": 1596563893942
-    },
-    {
-      "id": 3,
-      "avatar_url": "http://google.com",
-      "name": "Júlio",
-      "birth": 936489600000,
-      "education_level": "master",
-      "class_type": "distance",
-      "expertises": "Programming, Mathematics, Crossfit",
-      "created_at": 1596565061245
-    }
   ]
 }

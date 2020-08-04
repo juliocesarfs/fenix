@@ -37,10 +37,10 @@
   <div>Educational level</div>
   <div>
     <select name="education_level">
-      <option value="high school" selected>High school</option>
-      <option value="university education">University education</option>
-      <option value="master degree">Master</option>
-      <option value="doctorate degree">Doctorate degree</option>
+      <option value="school" {% if teacher.education_level == "school" %} selected {% endif %}>High school</option>
+      <option value="university" {% if teacher.education_level == "university" %} selected {% endif %}>University education</option>
+      <option value="master" {% if teacher.education_level == "master" %} selected {% endif %}>Master</option>
+      <option value="doctorate" {% if teacher.education_level == "doctorate" %} selected {% endif %}>Doctorate degree</option>
     </select>
   </div>
 </div>
