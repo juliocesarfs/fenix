@@ -1,24 +1,4 @@
 {
   "teachers": [
-    {
-      "id": "1",
-      "avatar_url": "http://google.com",
-      "name": "Júliozin",
-      "birth": 926208000000,
-      "education_level": "university",
-      "class_type": "Presential",
-      "expertises": "Programming, Mathematics, Crossfit",
-      "created_at": 1596572406791
-    },
-    {
-      "id": 2,
-      "avatar_url": "http://google.com",
-      "name": "Heloisa",
-      "birth": 936489600000,
-      "education_level": "doctorate",
-      "class_type": "Presential",
-      "expertises": "Programming, Mathematics, Crossfit",
-      "created_at": 1596572582028
-    }
   ]
 }
