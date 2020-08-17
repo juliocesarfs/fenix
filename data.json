@@ -1,12 +1,12 @@
 {
   "teachers": [
     {
-      "id": 1,
+      "id": "1",
       "avatar_url": "http://google.com",
-      "name": "Júlio",
+      "name": "Júliozin",
       "birth": 926208000000,
       "education_level": "university",
-      "class_type": "Distance",
+      "class_type": "Presential",
       "expertises": "Programming, Mathematics, Crossfit",
       "created_at": 1596572406791
     },
