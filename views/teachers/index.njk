@@ -11,16 +11,27 @@
         </tr>
       </thead>
       <tbody>
+        {% for teacher in teachers %}
         <tr>
           <td>
-            <span style="background-image: url({{ instructor.avatar_url }})" ></span>
-            Julio
+            <span style="background-image: url({{ teacher.avatar_url }})" ></span>
+            {{ teacher.name }}
           </td>
           <td id="expertises">
-            <p>Mathematics</p>
+
+            {% for expertise in teacher.expertises.slice(0, 4) %}
+              {% if loop.index0 >= 3 %}
+                <p>...</p>
+              {% endif %}
+              {% if loop.index0 < 3 %}
+                <p>{{ expertise }}</p>
+              {% endif %}
+            {% endfor %}
+
           </td>
-          <td><a href="/instructors">ver</a></td>
+          <td><a href="/teachers/{{ teacher.id }}">ver</a></td>
         </tr>
+        {% endfor %}
       </tbody>
     </table>
   </div>

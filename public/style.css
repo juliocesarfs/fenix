@@ -241,6 +241,10 @@ td, th {
   border-bottom: 1px solid var(--color-body);
 }
 
+td {
+  height: 110px;
+}
+
 th {
   text-transform: uppercase;
   color: #777;
