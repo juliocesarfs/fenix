@@ -32,6 +32,6 @@ Our biggest motivation is in relation to Covid-19, with schools closed, teachers
 
 ## :blue_book: LICENSE
 
-Under development. Released in 2020. This project is under the MIT License
+Under development. Released in 2021. This project is under the MIT License
 
 Made with 💜 by [***Júlio César***](https://github.com/juliocesarfs)
