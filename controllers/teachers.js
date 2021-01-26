@@ -1,6 +1,6 @@
-const fs = require('fs');
-const data = require('../data.json');
-const { graduation, date, age, findTeacher } = require('../utils');
+const fs = require('fs')
+const data = require('../data.json')
+const { graduation, date, age, findTeacher } = require('../utils')
 
 exports.index = function(req, res) {
 
@@ -10,26 +10,26 @@ exports.index = function(req, res) {
       expertises: teacher.expertises.split(',')
     } 
 
-    return newTeacher;
+    return newTeacher
   });
 
 
-  return res.render('teachers/index', { teachers });
+  return res.render('teachers/index', { teachers })
 }
 
 exports.post = function(req, res) {
-  const keys = Object.keys(req.body);
+  const keys = Object.keys(req.body)
 
   for (key of keys) {
     if (req.body[key] == '')
       return res.send('Please fill all fields');
   }
 
-  let { avatar_url, name, birth, education_level, class_type, expertises } = req.body;
+  let { avatar_url, name, birth, education_level, class_type, expertises } = req.body
 
-  const created_at = Date.now();
-  const id = Number(data.teachers.length + 1);
-  birth = Date.parse(birth);
+  const created_at = Date.now()
+  const id = Number(data.teachers.length + 1)
+  birth = Date.parse(birth)
 
   data.teachers.push({
     id,
@@ -40,19 +40,19 @@ exports.post = function(req, res) {
     class_type,
     expertises,
     created_at
-  });
+  })
 
   fs.writeFile('data.json', JSON.stringify(data, null, 2), function(err) {
-    if (err) return res.send('Write file error!');
+    if (err) return res.send('Write file error!')
 
-    return res.redirect('teachers');
+    return res.redirect('teachers')
   })
 }
 
 exports.show = function(req, res) {
-  const foundTeacher = findTeacher(req.params);
+  const foundTeacher = findTeacher(req.params)
 
-  if(!foundTeacher) return res.send('Teacher not found!');
+  if(!foundTeacher) return res.send('Teacher not found!')
 
   const teacher = {
     ...foundTeacher,
@@ -62,20 +62,20 @@ exports.show = function(req, res) {
     created_at: new Intl.DateTimeFormat('eng-US').format(foundTeacher.created_at)
   }
   
-  return res.render('teachers/show', { teacher });
+  return res.render('teachers/show', { teacher })
 }
 
 exports.edit = function(req, res) {
-  const foundTeacher = findTeacher(req.params);
+  const foundTeacher = findTeacher(req.params)
 
-  if(!foundTeacher) return res.send('Teacher not found!');
+  if(!foundTeacher) return res.send('Teacher not found!')
 
   const teacher = {
     ...foundTeacher,
-    birth: date(foundTeacher.birth),
+    birth: date(foundTeacher.birth)
   }
 
-  return res.render('teachers/edit', { teacher });
+  return res.render('teachers/edit', { teacher })
 }
 
 exports.put = function(req, res) {
@@ -91,7 +91,7 @@ exports.put = function(req, res) {
     id: Number(foundTeacher.id)
   }
 
-  data.teachers[teacher.id - 1] = teacher;
+  data.teachers[teacher.id - 1] = teacher
 
   fs.writeFile('data.json', JSON.stringify(data, null, 2), function(err) {
     if(err) return res.send('Write file error!')
@@ -102,17 +102,17 @@ exports.put = function(req, res) {
 }
 
 exports.delete = function(req, res) {
-  const { id } = req.body;
+  const { id } = req.body
 
   const filteredTeachers = data.teachers.filter(function(teacher) {
-    return teacher.id != id;
+    return teacher.id != id
   })
 
-  data.teachers = filteredTeachers;
+  data.teachers = filteredTeachers
 
   fs.writeFile('data.json', JSON.stringify(data, null, 2), function(err) {
     if(err) return res.send('Write file error!')
   
-    return res.redirect('/teachers');
+    return res.redirect('/teachers')
   })
 }
