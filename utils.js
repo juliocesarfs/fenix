@@ -22,6 +22,15 @@ module.exports = {
 
     return foundTeacher;
   },
+  findStudent: function(params) {
+    const { id } = params;
+
+    const foundStudent = data.students.find(function(student) {
+      return student.id == id;
+    })
+
+    return foundStudent;
+  },
   date: function(timestamp) {
     const date = new Date(timestamp);
     
