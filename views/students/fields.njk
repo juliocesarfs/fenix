@@ -1,74 +1,73 @@
-<div class="item">
-  <div>Avatar URL</div>
-  <div>
-    <input 
-      type="url" 
-      name="avatar_url"
-      placeholder="http://"
-      value="{{ teacher.avatar_url }}"
-    >
-  </div>
-</div>
+      <h3>New student</h3>
 
-<div class="item">
-  <div>Name</div>
-  <div>
-    <input 
-      type="text" 
-      name="name"
-      placeholder="Teacher name"
-      value="{{ teacher.name }}"
-    >
-  </div>
-</div>
+      <div class="item">
+        <div>Avatar URL</div>
+        <div>
+          <input 
+            type="url" 
+            name="avatar_url"
+            placeholder="http://"
+          >
+        </div>
+      </div>
 
-<div class="item">
-  <div>Birth date</div>
-  <div>
-    <input 
-      type="date" 
-      name="birth"
-      value="{{ teacher.birth }}" 
-    >
-  </div>
-</div>
+      <div class="item">
+        <div>Name</div>
+        <div>
+          <input 
+            type="text" 
+            name="name"
+            placeholder="Student name"
+          >
+        </div>
+      </div>
 
-<div class="item">
-  <div>Educational level</div>
-  <div>
-    <select name="education_level">
-      <option value="school" {% if teacher.education_level == "school" %} selected {% endif %}>High school</option>
-      <option value="university" {% if teacher.education_level == "university" %} selected {% endif %}>University education</option>
-      <option value="master" {% if teacher.education_level == "master" %} selected {% endif %}>Master</option>
-      <option value="doctorate" {% if teacher.education_level == "doctorate" %} selected {% endif %}>Doctorate degree</option>
-    </select>
-  </div>
-</div>
+      <div class="item">
+        <div>Email</div>
+        <div>
+          <input 
+            type="email" 
+            name="email"
+            placeholder="Student email"
+          >
+        </div>
+      </div>
 
-<div class="item">
-  <div>Class type</div>
-  <div>
-    <span>
-      <input type="radio" name="class_type" value="Presential" {% if teacher.class_type == "Presential" %} checked {% endif %}>
-      Presential
-    </span>
-    <span>
-      <input type="radio" name="class_type" value="Distance" {% if teacher.class_type == "Distance" %} checked {% endif %}>
-      Distance
-    </span>
-  </div>
-</div>
+      <div class="item">
+        <div>Birth date</div>
+        <div>
+          <input 
+            type="date" 
+            name="birth" 
+          >
+        </div>
+      </div>
 
-<div class="item">
-  <div>Expertise area</div>
-  <div>
-    <input 
-      type="text" 
-      name="expertises"
-      placeholder="Separate each expertise area with a comma"
-      value="{{ teacher.expertises}}"
-    >
-  </div>
-</div>
+      <div class="item">
+        <div>School year</div>
+        <div>
+          <select name="school_year">
+            <option value="5EF" {% if student.school_year == "5EF" %} selected {% endif %}>5th year of Elementary School</option>
+            <option value="5EF" {% if student.school_year == "6EF" %} selected {% endif %}>6th year of Elementary School</option>
+            <option value="5EF" {% if student.school_year == "7EF" %} selected {% endif %}>7th year of Elementary School</option>
+            <option value="5EF" {% if student.school_year == "8EF" %} selected {% endif %}>8th year of Elementary School</option>
+            <option value="5EF" {% if student.school_year == "9EF" %} selected {% endif %}>9th year of Elementary School</option>
+            <option value="5EF" {% if student.school_year == "1EM" %} selected {% endif %}>1st year of High School</option>
+            <option value="5EF" {% if student.school_year == "2EM" %} selected {% endif %}>2nd Year of High School</option>
+            <option value="5EF" {% if student.school_year == "3EM" %} selected {% endif %}>3rd Year of High School</option>
+          </select>
+        </div>
+      </div>
 
-<button type="submit">Save</button>
+      <div class="item">
+        <div>Weekly workload</div>
+        <div>
+          <input 
+            type="number" 
+            name="workload"
+          >
+        </div>
+      </div>
+      
+
+    <button type="submit">Save</button>
