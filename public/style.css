@@ -4,6 +4,7 @@
   --color-header: rgb(36, 31, 31);
   --color-fenix: #C94B32;
   --color-body: #81604C;
+  --color-input: #857266;
 }
 
 
@@ -168,7 +169,7 @@ header nav .links a:hover::after {
 /*=== FORM === */
 form input, select, option, button {
   color: black;
-  background-color: var(--color-body);
+  background-color: var(--color-input);
   border-radius: 3px;
   border: none;
 }
@@ -176,7 +177,8 @@ form input {
   width: 100%;
   outline: none;
   font-size: 18px;
-  font-weight: bold;
+  border-radius: 1px;
+  padding: 5px;
 }
 
 input[type="radio"] {
