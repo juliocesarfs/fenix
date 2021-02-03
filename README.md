@@ -10,7 +10,7 @@
 
 # 📌 Table of Contents
 - [About](#speech_balloon-About)
-- [PURPOSE](#Purpose)
+- [Purpose](#Purpose)
 - [Motivation](#love_letter-Motivation)
 - [LICENSE](#blue_book-LICENSE)
 
