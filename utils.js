@@ -61,6 +61,9 @@ module.exports = {
       case '7EF': return '7th year of Elementary School';
       case '8EF': return '8th year of Elementary School';
       case '9EF': return '9th year of Elementary School';
+      case '1EM': return '1st year of High School';
+      case '2EM': return '2nd year of High School';
+      case '3EM': return '3rd year of High School';
     }
   }
 }
