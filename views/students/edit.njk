@@ -8,17 +8,17 @@
 
   <section class="details">
 
-  <form method="POST" action="/teachers?_method=PUT">
+  <form method="POST" action="/students?_method=PUT">
 
-      <h3>Edit teacher</h3>
+      <h3>Edit student</h3>
 
-      {% include 'teachers/fields.njk' %}
+      {% include 'students/fields.njk' %}
 
-      <input type="hidden" name="id" value="{{ teacher.id }}"> 
+      <input type="hidden" name="id" value="{{ student.id }}"> 
   </form>
 
-  <form id="form-delete" action="/teachers?_method=DELETE" method="POST">
-    <input type="hidden" name="id" value="{{ teacher.id }}">
+  <form id="form-delete" action="/students?_method=DELETE" method="POST">
+    <input type="hidden" name="id" value="{{ student.id }}">
     <button type="submit">Delete</button>
   </form>
 
