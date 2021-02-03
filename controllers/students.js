@@ -44,7 +44,8 @@ exports.show = function(req, res) {
   const student = {
     ...foundStudent,
     age: age(foundStudent.birth),
-    school_year: grade(foundStudent.school_year)
+    school_year: grade(foundStudent.school_year),
+    birth: date(foundStudent.birth).birthDay
   }
 
   return res.render('students/show', { student })
