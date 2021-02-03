@@ -53,5 +53,14 @@ module.exports = {
       case 'master': return 'Master degree';
       case 'doctorate': return 'Doctorate degree';
     }
+  },
+  grade: function(school_year) {
+    switch (school_year) {
+      case '5EF': return '5th year of Elementary School';
+      case '6EF': return '6th year of Elementary School';
+      case '7EF': return '7th year of Elementary School';
+      case '8EF': return '8th year of Elementary School';
+      case '9EF': return '9th year of Elementary School';
+    }
   }
 }
