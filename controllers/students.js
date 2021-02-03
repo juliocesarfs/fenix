@@ -59,7 +59,7 @@ exports.edit = function(req, res) {
     birth: date(foundStudent.birth).iso
   }
 
-  return res.render('student/edit', { student })
+  return res.render('students/edit', { student })
 }
 
 exports.put = function(req, res) {
