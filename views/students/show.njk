@@ -2,46 +2,39 @@
 
 {% block content %}
   <div class="card">
-    <section class="avatar" style="{{ teacher.avatar_url }}">
+    <section class="avatar" style="{{ student.avatar_url }}">
     </section>
 
     <section class="details">
       <h3>Details</h3>
       <div class="item">
         <div>Name</div>
-        <div>{{ teacher.name }}</div>
+        <div>{{ student.name }}</div>
+      </div>
+
+      <div class="item">
+        <div>Email</div>
+        <div>{{ student.email }}</div>
       </div>
 
       <div class="item">
         <div>Age</div>
-        <div>{{ teacher.age }}</div>
+        <div>{{ student.age }}</div>
       </div>
 
       <div class="item">
-        <div>Educational level</div>
-        <div>{{ teacher.education_level }}</div>
+        <div>School Year</div>
+        <div>{{ student.school_year }}</div>
       </div>
 
       <div class="item">
-        <div>Class type</div>
-        <div>{{ teacher.class_type }}</div>
-      </div>
-
-      <div class="item">
-        <div>Accompaniment</div>
+        <div>Weekly workload (Hours)</div>
         <div>
-          {% for expertise in teacher.expertises%}
-            <span>{{ expertise }}</span>
-          {% endfor %}
+          {{ student.workload }}
         </div>
       </div>
 
-      <div class="item">
-        <div>Since</div>
-        <div>{{ teacher.created_at }}</div>
-      </div>
-
-      <a href="/teachers/{{ teacher.id }}/edit" class="button">Edit</a>
+      <a href="/students/{{ student.id }}/edit" class="button">Edit</a>
     </section>
   </div>
 {% endblock content %}
