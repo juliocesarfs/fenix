@@ -1,15 +1,4 @@
 {
   "students": [],
-  "teachers": [
-    {
-      "id": 1,
-      "avatar_url": "http://www.google.com",
-      "name": "Julião",
-      "birth": 7956835200000,
-      "education_level": "university",
-      "class_type": "Distance",
-      "expertises": "Programation, Mathematics, asdasdasd",
-      "created_at": 1611624370167
-    }
-  ]
+  "teachers": []
 }
