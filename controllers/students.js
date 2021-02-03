@@ -103,6 +103,8 @@ exports.delete = function(req, res) {
     return student.id != id
   })
 
+  data.students = filteredStudents
+
   fs.writeFile('data.json', JSON.stringify(data, null, 2), function(err) {
     if (err) return res.send('Write file error!')
 
