@@ -10,7 +10,7 @@
 
 # 📌 Table of Contents
 - [About](#speech_balloon-About)
-- [WARNING](#warning-WARNING)
+- [PURPOSE](#Purpose)
 - [Motivation](#love_letter-Motivation)
 - [LICENSE](#blue_book-LICENSE)
 
@@ -23,8 +23,8 @@ A free platform, aiming at free knowledge and valuing teachers who want to make 
 
 Where both (teacher and student) are totally free within the platform, our only goal is to connect them.
 
-## :warning: WARNING
-The purpose of this project is for my personal study, unfortunately the Fênix is ​​not an application in the market.
+## Purpose
+The purpose of this project is for my personal study.
 
 ## :love_letter: Motivation
 Our biggest motivation is in relation to Covid-19, with schools closed, teachers and students at home, the idea came up to create a completely online platform where teachers can exercise their occupation at home.
