@@ -1,6 +1,6 @@
 const fs = require('fs')
 const data = require('../data.json')
-const { graduation, date, age, findStudent } = require('../utils')
+const { grade, date, age, findStudent } = require('../utils')
 
 exports.index = function(req, res) {
   return res.render('students/index', { students: data.students })
@@ -43,7 +43,8 @@ exports.show = function(req, res) {
 
   const student = {
     ...foundStudent,
-    age: age(foundStudent.birth)
+    age: age(foundStudent.birth),
+    school_year: grade(foundStudent.school_year)
   }
 
   return res.render('students/show', { student })
