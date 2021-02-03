@@ -3,7 +3,17 @@ const data = require('../data.json')
 const { grade, date, age, findStudent } = require('../utils')
 
 exports.index = function(req, res) {
-  return res.render('students/index', { students: data.students })
+
+  let students = data.students.map(function(student) {
+    const newStudent = {
+      ...student,
+      school_year: grade(student.school_year)
+    } 
+
+    return newStudent
+  });
+  
+  return res.render('students/index', { students })
 }
 
 exports.post = function(req, res) {
