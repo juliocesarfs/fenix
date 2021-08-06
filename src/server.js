@@ -17,7 +17,7 @@ server.use(routes);
 server.set('view engine', 'njk');
 
 //configurando o nunjucks para a template engine
-nunjucks.configure('views', {
+nunjucks.configure('src/app/views', {
   express: server,
   autoescape: false,
   noCache: true
