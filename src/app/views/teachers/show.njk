@@ -30,8 +30,8 @@
       <div class="item">
         <div>Accompaniment</div>
         <div>
-          {% for expertise in teacher.expertises%}
-            <span>{{ expertise }}</span>
+          {% for subject_taught in teacher.subjects_taught %}
+            <span>{{ subject_taught }}</span>
           {% endfor %}
         </div>
       </div>

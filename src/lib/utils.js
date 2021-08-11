@@ -1,7 +1,6 @@
-const data = require('./data.json');
 
 module.exports = {
-  age: function(timestamp) {
+  age(timestamp) {
     const today = new Date();
     const birthDate = new Date(timestamp);
 
@@ -13,7 +12,7 @@ module.exports = {
 
     return age;
   },
-  findTeacher: function(params) {
+  findTeacher(params) {
     const { id } = params;
 
     const foundTeacher = data.teachers.find(function(teacher) {
@@ -22,7 +21,7 @@ module.exports = {
 
     return foundTeacher;
   },
-  findStudent: function(params) {
+  findStudent(params) {
     const { id } = params;
 
     const foundStudent = data.students.find(function(student) {
@@ -31,7 +30,7 @@ module.exports = {
 
     return foundStudent;
   },
-  date: function(timestamp) {
+  date(timestamp) {
     const date = new Date(timestamp);
     
     const year = date.getUTCFullYear()
@@ -43,10 +42,11 @@ module.exports = {
       month, 
       year,
       iso: `${year}-${month}-${day}`,
-      birthDay: `${month}/${day}`
+      birthDay: `${month}/${day}`,
+      format: `${day}/${month}/${year}`
     };
   },
-  graduation: function(education_level) {
+  graduation(education_level) {
     switch (education_level) {
       case 'school': return 'High School';
       case 'university': return 'University Education';
@@ -54,7 +54,7 @@ module.exports = {
       case 'doctorate': return 'Doctorate degree';
     }
   },
-  grade: function(school_year) {
+  grade(school_year) {
     switch (school_year) {
       case '5EF': return '5th year of Elementary School';
       case '6EF': return '6th year of Elementary School';
@@ -65,5 +65,16 @@ module.exports = {
       case '2EM': return '2nd year of High School';
       case '3EM': return '3rd year of High School';
     }
+  },
+  separateSubjects(objects) {
+    let object = objects.map(function(object){
+      const newObject = {
+          ...object,
+          subjects_taught: object.subjects_taught.split(',')
+      }
+      return newObject;
+    });
+
+    return object
   }
 }

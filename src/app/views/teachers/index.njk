@@ -18,14 +18,14 @@
             <span style="background-image: url({{ teacher.avatar_url }})" ></span>
             {{ teacher.name }}
           </td>
-          <td id="expertises">
+          <td id="subjects_taught">
 
-            {% for expertise in teacher.expertises.slice(0, 4) %}
+            {% for subject_taught in teacher.subjects_taught %}
               {% if loop.index0 >= 3 %}
                 <p>...</p>
               {% endif %}
               {% if loop.index0 < 3 %}
-                <p>{{ expertise }}</p>
+                <p>{{ subject_taught }}</p>
               {% endif %}
             {% endfor %}
 

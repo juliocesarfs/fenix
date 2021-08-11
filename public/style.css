@@ -292,7 +292,7 @@ td:last-child {
   text-align: center;
 }
 
-#expertises p {
+#subjects_taught p {
   padding: 8px 16px;
   background-color: var(--color-fenix);
   border-radius: 16px;
