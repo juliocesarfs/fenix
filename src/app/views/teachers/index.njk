@@ -2,12 +2,25 @@
 
 {% block content %}
   <div class="card table-container">
-    <a href="/teachers/create">New</a>
+    <div class="header">
+      <a class="button" href="/teachers/create">New</a>
+      <form action="/teachers" method="get">
+        <input 
+          type="text" 
+          name="filter" 
+          placeholder="Name or accompaniment"
+          value={{ filter }}
+        >
+        <button type="submit">Filter</button>
+      </form>
+    </div>
+
     <table width="100%">
       <thead>
         <tr>
           <th>Teacher</th>
           <th>Accompaniment</th>
+          <th>Students</th>
           <th>Action</th>
         </tr>
       </thead>
@@ -21,15 +34,16 @@
           <td id="subjects_taught">
 
             {% for subject_taught in teacher.subjects_taught %}
-              {% if loop.index0 >= 3 %}
+              {% if loop.index0 >= 2 %}
                 <p>...</p>
               {% endif %}
-              {% if loop.index0 < 3 %}
+              {% if loop.index0 < 2 %}
                 <p>{{ subject_taught }}</p>
               {% endif %}
             {% endfor %}
 
           </td>
+          <td>{{ teacher.total_students }}</td>
           <td><a href="/teachers/{{ teacher.id }}">ver</a></td>
         </tr>
         {% endfor %}
