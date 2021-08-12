@@ -11,9 +11,7 @@ routes.get('/', function(req, res) {
 
 // TEACHERS
 routes.get('/teachers', teachers.index)
-routes.get('/teachers/create', function(req, res) {
-  return res.render('teachers/create');
-})
+routes.get('/teachers/create', teachers.create)
 routes.post('/teachers', teachers.post)
 routes.get('/teachers/:id', teachers.show)
 routes.get('/teachers/:id/edit', teachers.edit)
@@ -22,9 +20,7 @@ routes.delete('/teachers', teachers.delete)
 
 // STUDENTS
 routes.get('/students', students.index)
-routes.get('/students/create', function(req, res) {
-  return res.render('students/create')
-})
+routes.get('/students/create', students.create)
 routes.post('/students', students.post)
 routes.get('/students/:id', students.show)
 routes.get('/students/:id/edit', students.edit)

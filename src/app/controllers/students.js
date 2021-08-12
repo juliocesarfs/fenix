@@ -17,7 +17,9 @@ module.exports = {
     })
   },
   create(req, res) {
-    return res.render('students/create');
+    Student.teachersSelectOptions((options) => {
+      return res.render('students/create', { teachersOptions: options });
+    })
   },
   post(req, res) {
     const keys = Object.keys(req.body)
@@ -50,7 +52,9 @@ module.exports = {
 
       student.birth_date = date(student.birth_date).iso
 
-      return res.render('students/edit', { student })
+      Student.teachersSelectOptions((options) => {
+        return res.render('students/edit', { student, teachersOptions: options })
+      })
     })
   },
   put(req, res) {
